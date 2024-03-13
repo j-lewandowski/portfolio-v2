@@ -3,11 +3,11 @@ import Hero from "../_components/about-me/Hero";
 
 const Introduction = () => {
   return (
-    <section className="w-full h-screen flex items-center justify-center">
-      <div className="flex-1">
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-center gap-y-12 md:gap-y-0">
+      <div className="md:flex-1">
         <Hero />
       </div>
-      <div className="flex-1">
+      <div className="md:flex-1">
         <AboutMe />
       </div>
     </section>

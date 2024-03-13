@@ -7,7 +7,7 @@ const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="w-full h-16 flex text-white text-2xl font-bold justify-around items-center backdrop-blur fixed z-30">
+    <nav className="w-full h-16 text-white md:text-xl font-bold justify-around items-center backdrop-blur fixed z-30 flex">
       <div>
         <Image
           src="/images/Memoji-laptop.png"
@@ -16,7 +16,7 @@ const Navbar = () => {
           width={64}
         />
       </div>
-      <ul className="flex gap-x-6">
+      <ul className="md:flex hidden gap-x-6">
         <Link
           href="/"
           className={pathName === "/" ? "text-white" : "text-secondary"}

@@ -14,6 +14,7 @@ const SFPro = localFont({
     { path: "../../public/fonts/SF-Pro-Text-Regular.otf", weight: "400" },
     { path: "../../public/fonts/SF-Pro-Text-Medium.otf", weight: "500" },
     { path: "../../public/fonts/SF-Pro-Text-Bold.otf", weight: "700" },
+    { path: "../../public/fonts/SF-Pro.ttf", weight: "300" },
   ],
   variable: "--font-SFPro",
 });
