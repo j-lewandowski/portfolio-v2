@@ -18,6 +18,9 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-SFPro)"],
       },
+      animation: {
+        slideFromRight: "slideFromRight 0.15s ease-out forwards",
+      },
     },
   },
   plugins: [],

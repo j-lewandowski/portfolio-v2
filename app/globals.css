@@ -9,3 +9,14 @@ html,
   padding: 0;
   width: 100%;
 }
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
