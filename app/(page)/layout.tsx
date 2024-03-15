@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const SFPro = localFont({
   src: [
+    { path: "../../public/fonts/SF-Pro-Text-Thin.otf", weight: "100" },
     { path: "../../public/fonts/SF-Pro-Text-Regular.otf", weight: "400" },
     { path: "../../public/fonts/SF-Pro-Text-Medium.otf", weight: "500" },
     { path: "../../public/fonts/SF-Pro-Text-Bold.otf", weight: "700" },
