@@ -1,5 +1,7 @@
 import ProjectComponent from "./_components/ProjectComponent";
 
+import PinnedProjects from "@/data/PinnedProjects.json";
+
 const Projects = () => {
   return (
     <div className="w-full min-h-screen pt-32 flex flex-col items-center justify-start">
@@ -10,30 +12,16 @@ const Projects = () => {
         <div className="w-[55%] h-[2px] bg-white/15"></div>
       </div>
       <div className="w-full px-32 flex items-center justify-start flex-col mt-32 gap-y-6 pb-8">
-        <ProjectComponent
-          id={1}
-          name="Prestika Website"
-          description="A custom made website for my neighbour’s business connected to
-            Sanity.io CMS for easy content managment."
-          image="./images/prestika.png"
-          technologies={["React", "Sanity.io", "Taliwindcss"]}
-        />
-        <ProjectComponent
-          id={1}
-          name="Prestika Website"
-          description="A custom made website for my neighbour’s business connected to
-            Sanity.io CMS for easy content managment."
-          image="./images/prestika.png"
-          technologies={["React", "Sanity.io", "Taliwindcss"]}
-        />
-        <ProjectComponent
-          id={1}
-          name="Prestika Website"
-          description="A custom made website for my neighbour’s business connected to
-            Sanity.io CMS for easy content managment."
-          image="./images/prestika.png"
-          technologies={["React", "Sanity.io", "Taliwindcss"]}
-        />
+        {PinnedProjects.map((project) => (
+          <ProjectComponent
+            key={project.id}
+            id={project.id}
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            technologies={project.technologies}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "prestika",
+    "name": "Prestika Website",
+    "description": "Custom made website for my neighbour’s business connected to Sanity.io CMS for easy content managment.",
+    "image": "/images/prestika.png",
+    "technologies": ["React", "Sanity.io", "Taliwindcss"],
+    "github": "",
+    "deployment_url": "https://www.prestika.pl"
+  },
+  {
+    "id": "foodiebuddy",
+    "name": "Foodiebuddy",
+    "description": "A web application that is a tierlist of restaurants visited. Created to rate food outlets and mark their locations on the map, while creating a rich map of memories and places to return to.",
+    "image": "/images/prestika.png",
+    "technologies": [
+      "React",
+      "Next.js",
+      "Mongodb",
+      "NextAuth",
+      "Typescript",
+      "Taliwindcss"
+    ],
+    "github": "https://github.com/j-lewandowski/foodiebuddy",
+    "deployment_url": "https://foodiebuddy.vercel.app"
+  }
+]

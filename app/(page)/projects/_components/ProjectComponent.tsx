@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 interface ProjectComponentProps {
-  id: number;
+  id: string;
   name: string;
   image: string;
   description: string;

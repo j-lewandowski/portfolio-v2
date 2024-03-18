@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface ProjectComponentProps {
-  id: number;
+  id: string;
   name: string;
   image: string;
   description: string;
@@ -31,7 +31,7 @@ const ProjectComponent = ({
             {description}
           </p>
         </div>
-        <div className="flex items-center justify-start w-full py-3 md:py-6 text-sm md:text-base gap-x-1">
+        <div className="flex items-center justify-start w-full max-w-screen-sm flex-wrap gap-y-2 py-3 md:py-6 text-sm md:text-base gap-x-1">
           {technologies.map((tech) => (
             <div
               key={tech}
