@@ -20,6 +20,8 @@ const config: Config = {
       },
       animation: {
         slideFromRight: "slideFromRight 0.15s ease-out forwards",
+        dotMove: "dotMove 3s infinite linear",
+        spinSlow: "spin 3s infinite linear",
       },
     },
   },

@@ -45,9 +45,9 @@ const Skills = () => {
     <section className="w-full flex flex-col items-center justify-center text-white mb-16 md:mb-32">
       <span className="font-bold text-lg md:text-4xl mb-6">Skills</span>
       <div className="grid grid-cols-3 grid-rows-3 gap-3">
-        {Logos.map((logo) => (
-          <SkillItem key={logo.alt}>
-            <Image src={logo.src} alt={logo.alt} height={56} width={56} />
+        {Logos.map((logo, i) => (
+          <SkillItem iterator={i} key={logo.alt}>
+            <Image src={logo.src} alt={logo.alt} fill />
           </SkillItem>
         ))}
       </div>
