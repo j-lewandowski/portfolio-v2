@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${SFPro.variable} font-sans bg-primary`}>
+      <body className={`${SFPro.variable} font-sans bg-primary relative`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

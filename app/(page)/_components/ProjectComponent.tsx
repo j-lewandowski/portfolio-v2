@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 interface ProjectComponentProps {
+  id: number;
   name: string;
   image: string;
   description: string;
@@ -6,13 +9,17 @@ interface ProjectComponentProps {
 }
 
 const ProjectComponent = ({
+  id,
   name,
   image,
   description,
   technologies,
 }: ProjectComponentProps) => {
   return (
-    <div className="flex flex-col-reverse md:flex-row w-full md:min-h-64 md:p-12 max-w-screen-lg rounded-lg duration-150 md:hover:bg-primary-light/60">
+    <Link
+      href={`/projects/${id}`}
+      className="flex flex-col-reverse md:flex-row w-full md:min-h-64 md:p-12 max-w-screen-lg rounded-lg duration-150 md:hover:bg-primary-light/60"
+    >
       <div
         className="bg-cover h-44 rounded-md w-full md:w-2/5 bg-center border-2 border-secondary/60"
         style={{ backgroundImage: `url('${image}')` }}
@@ -35,7 +42,7 @@ const ProjectComponent = ({
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
