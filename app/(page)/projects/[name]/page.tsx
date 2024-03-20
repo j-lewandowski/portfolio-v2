@@ -20,9 +20,9 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
   }
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center px-32 pt-24">
-      <div className="w-full max-w-screen-2xl h-[500px] bg-secondary/[7%] border-2 border-white/10 rounded-md px-auto py-8 flex items-center justify-center mb-8">
-        <div className="w-auto h-full aspect-video relative">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center px-2 md:mx-2 md:px-32 pt-20 md:py-24">
+      <div className="w-full max-w-screen-2xl h-full py-4 pb-16 md:h-[500px] bg-secondary/[7%] border-2 border-white/10 rounded-md px-auto md:py-8 flex items-center justify-center md:mb-8">
+        <div className="md:w-auto md:h-full w-full h-auto  aspect-video relative">
           <Image
             src={projectData.image}
             alt="zdjecie tymczasowe"
@@ -32,8 +32,8 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
         </div>
       </div>
 
-      <section className="grid grid-cols-4 grid-rows-2 w-full text-white gap-3 max-w-screen-2xl">
-        <div className="flex flex-col w-full col-span-2">
+      <section className="grid grid-cols-1 text-sm md:text-base md:grid-cols-4 md:grid-rows-2 w-full text-white gap-3 max-w-screen-2xl mt-4 px-2">
+        <div className="flex flex-col w-full md:col-span-2">
           <span className="text-secondary font-semibold">Name</span>
           <span className="font-semibold text-lg">{projectData.name}</span>
         </div>
@@ -51,7 +51,7 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
             <span className="font-semibold text-lg">Done</span>
           </div>
         </div>
-        <div className="flex flex-col w-full col-span-2">
+        <div className="flex flex-col w-full md:col-span-2">
           <span className="text-secondary font-semibold">Github</span>
           <Link
             href={
@@ -66,7 +66,7 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
               : "[ Private ]"}
           </Link>
         </div>
-        <div className="flex flex-col w-full col-span-2">
+        <div className="flex flex-col w-full md:col-span-2">
           <span className="text-secondary font-semibold">Deployment link</span>
           <Link
             href={projectData.deployment_url}
@@ -77,7 +77,7 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
         </div>
       </section>
       {markdownContent && (
-        <section className="w-full flex flex-col mt-12 my-8 max-w-screen-2xl">
+        <section className="w-full flex flex-col mt-12 my-8 max-w-screen-2xl px-2">
           <div>
             <span className="text-secondary font-semibold">Description</span>
           </div>

@@ -21,9 +21,9 @@ const ProjectComponent = ({
       href={`/projects/${id}`}
       className="group group-hover:duration-150 flex flex-col justify-around w-full md:min-h-64 md:p-6 md:pb-0  max-w-screen-lg rounded-lg duration-150 border-2 border-secondary/10 hover:border-secondary"
     >
-      <div className="flex">
+      <div className="flex md:flex-row flex-col p-2 md:p-0">
         <div
-          className="bg-cover h-44 rounded-md w-full md:w-2/5 bg-center border-2 border-secondary/60"
+          className="bg-cover h-44 rounded-md w-full md:w-2/5 bg-center border-2 border-secondary/60 mb-2 md:mb-0"
           style={{ backgroundImage: `url('${image}')` }}
         ></div>
         <div className="w-full md:w-2/3 md:pl-12">
@@ -37,8 +37,8 @@ const ProjectComponent = ({
           </div>
         </div>
       </div>
-      <div className="flex w-full items-between pt-4 pb-1">
-        <div className="flex items-center justify-start w-full py-3 md:py-6 text-sm md:text-base gap-x-1">
+      <div className="flex flex-col md:flex-row w-full items-between pt-4 pb-1 px-2 md:px-0 ">
+        <div className="flex items-center justify-start w-full py-3 md:py-6 text-sm md:text-base gap-1 md:gap-x-1 flex-wrap">
           {technologies.map((tech) => (
             <div
               key={tech}

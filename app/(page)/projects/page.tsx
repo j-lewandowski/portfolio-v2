@@ -11,7 +11,7 @@ const Projects = () => {
         </div>
         <div className="w-[55%] h-[2px] bg-white/15"></div>
       </div>
-      <div className="w-full px-32 flex items-center justify-start flex-col mt-32 gap-y-6 pb-8">
+      <div className="w-full px-2 md:px-32 flex items-center justify-start flex-col mt-16 md:mt-32 gap-y-6 pb-8">
         {PinnedProjects.map((project) => (
           <ProjectComponent
             key={project.id}
