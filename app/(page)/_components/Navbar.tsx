@@ -2,24 +2,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-// import { create } from "zustand";
+import { create } from "zustand";
 
-// interface useNavbarTypes {
-//   isOpen: boolean;
-// }
+interface useNavbarTypes {
+  isOpen: boolean;
+  open: () => void;
+  close: () => void;
+  toggle: () => void;
+}
 
-// const useNavbar = create<useNavbarTypes>((set) => ({
-//   isOpen: false,
-//   open: () => set((state) => ({ isOpen: true })),
-//   close: () => set((state) => ({ isOpen: false })),
-// }));
+export const useNavbar = create<useNavbarTypes>((set) => ({
+  isOpen: false,
+  open: () => set((state) => ({ isOpen: true })),
+  close: () => set((state) => ({ isOpen: false })),
+  toggle: () => set((state) => ({ isOpen: !state.isOpen })),
+}));
 
 const Navbar = () => {
   const pathName = usePathname();
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { isOpen, toggle, close } = useNavbar();
 
   return (
     <>
@@ -56,7 +59,7 @@ const Navbar = () => {
         </ul>
         <div
           className="md:hidden h-12 aspect-square bg-secondary/[7%] rounded-md border-white/10 border-2 relative"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => toggle()}
         >
           <div
             className={twMerge(
@@ -78,12 +81,12 @@ const Navbar = () => {
           isOpen ? "translate-x-[0%] z-20" : "translate-x-[200%] z-0"
         )}
       >
-        <div className="pt-20 px-4 w-full h-full flex flex-col items-center justfy-center relative">
+        <div className="pt-20 px-4 w-full h-screen flex flex-col items-center justfy-center relative">
           <ul className="flex flex-col items-center py-12 border-t-2 border-white/10 text-3xl gap-y-6 ">
             <Link
               href="/"
               className={pathName === "/" ? "text-white" : "text-secondary"}
-              onClick={() => setIsOpen(false)}
+              onClick={() => close()}
             >
               Home
             </Link>
@@ -92,7 +95,7 @@ const Navbar = () => {
               className={
                 pathName === "/projects" ? "text-white" : "text-secondary"
               }
-              onClick={() => setIsOpen(false)}
+              onClick={() => close()}
             >
               Projects
             </Link>
