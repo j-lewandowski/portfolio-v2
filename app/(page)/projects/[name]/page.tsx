@@ -4,6 +4,8 @@ import Image from "next/image";
 import Projects from "@/data/Projects.json";
 import Link from "next/link";
 
+import styles from "./MarkdownStyles";
+
 const ProjectPage = async ({ params }: { params: { name: string } }) => {
   const projectData = Projects[params.name as keyof typeof Projects];
   let markdownContent;
@@ -82,7 +84,9 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
             <span className="text-secondary font-semibold">Description</span>
           </div>
           <div className="p-3 text-white bg-secondary/[7%] rounded-md border-2 border-white/10 ">
-            <Markdown>{markdownContent}</Markdown>
+            <Markdown options={{ overrides: styles }}>
+              {markdownContent}
+            </Markdown>
           </div>
         </section>
       )}

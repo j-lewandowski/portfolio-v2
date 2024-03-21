@@ -74,11 +74,11 @@ const Navbar = () => {
       </nav>
       <div
         className={twMerge(
-          "fixed w-full h-screen bg-black z-20 top-0 duration-150",
-          isOpen ? "left-[0%]" : "left-[100%]"
+          "fixed w-full h-full overflow-hidden bg-black duration-150 overscroll-contain",
+          isOpen ? "translate-x-[0%] z-20" : "translate-x-[200%] z-0"
         )}
       >
-        <div className="pt-20 px-4 w-full h-full flex flex-col items-center justfy-center relative ">
+        <div className="pt-20 px-4 w-full h-full flex flex-col items-center justfy-center relative">
           <ul className="flex flex-col items-center py-12 border-t-2 border-white/10 text-3xl gap-y-6 ">
             <Link
               href="/"

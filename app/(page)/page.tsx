@@ -4,9 +4,9 @@ import Skills from "./sections/Skills";
 
 export default function Home() {
   return (
-    <div className="w-full h-fit flex flex-col pt-16 items-center">
+    <div className="w-full h-fit flex flex-col pt-16 items-center gap-y-8">
       <Introduction />
-      <div className="h-[2px] w-[90%] bg-white/10 mb-32"></div>
+      <div className="h-[2px] w-[90%] bg-white/10 md:mb-28"></div>
       <Skills />
       <MyProjects />
     </div>
