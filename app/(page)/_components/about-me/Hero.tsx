@@ -12,9 +12,10 @@ const Hero = () => {
         width={320}
         height={320}
         loading="eager"
+        priority
       />
       <span className="text-white w-full text-center font-bold text-xl md:text-4xl -mt-4">
-        Fullstack <br /> Developer
+        Junior Fullstack <br /> Developer
       </span>
       <div className="w-full gap-2 text-[22px] text-secondary flex items-center justify-center text-base md:text-lg">
         <span>React</span>

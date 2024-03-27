@@ -77,7 +77,7 @@ const Navbar = () => {
       </nav>
       <div
         className={twMerge(
-          "fixed w-full h-full overflow-hidden bg-black duration-150 overscroll-contain",
+          "fixed w-full h-full overflow-hidden md:overflow-auto bg-black duration-150 md:overscroll-auto overscroll-contain",
           isOpen ? "translate-x-[0%] z-20" : "translate-x-[200%] z-0"
         )}
       >
