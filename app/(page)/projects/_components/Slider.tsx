@@ -40,12 +40,12 @@ const Slider = ({ images = [], auto = true }: SliderProps) => {
   }, []);
 
   return (
-    <div className="md:w-auto md:h-full w-full h-auto  aspect-video relative overflow-x-hidden">
+    <div className="md:w-auto md:h-full w-full h-auto aspect-video relative overflow-x-hidden">
       {images.map((img, i) => (
         <Image
           key={i}
           src={img}
-          alt="zdjecie tymczasowe"
+          alt="Zdjecie projektu"
           fill
           className={twMerge(
             "rounded-md transition-all duration-150",
