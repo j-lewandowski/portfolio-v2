@@ -6,7 +6,13 @@ const Hero = () => {
         <span className="pr-2">Hi, I&apos;m </span>
         <span className="px-4 py-3 text-black bg-white rounded-xl">Jakub</span>
       </div>
-      <Image src="/images/hello.svg" alt="Hello" width={320} height={320} />
+      <Image
+        src="/images/hello.svg"
+        alt="Hello"
+        width={320}
+        height={320}
+        loading="eager"
+      />
       <span className="text-white w-full text-center font-bold text-xl md:text-4xl -mt-4">
         Fullstack <br /> Developer
       </span>

@@ -48,7 +48,7 @@ const ProjectComponent = ({
             </div>
           ))}
         </div>
-        <span className="text-white flex items-center text-nowrap invisible group-hover:visible group-hover:animate-slideFromRight">
+        <span className="text-white flex items-center justify-end md:justify-normal text-nowrap invisible group-hover:visible group-hover:animate-slideFromRight">
           Show project <FaArrowRight className="ml-3" />
         </span>
       </div>
