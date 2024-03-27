@@ -13,7 +13,7 @@ const MyProjects = () => {
             id={project.id}
             name={project.name}
             description={project.description}
-            image={project.image}
+            image={project.images}
             technologies={project.technologies}
           />
         ))}

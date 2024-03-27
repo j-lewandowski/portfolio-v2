@@ -1,10 +1,10 @@
 import Markdown from "markdown-to-jsx";
-import Image from "next/image";
 
 import Projects from "@/data/Projects.json";
 import Link from "next/link";
 
 import styles from "./MarkdownStyles";
+import ManualSlider from "./_components/ManualSlider";
 
 const ProjectPage = async ({ params }: { params: { name: string } }) => {
   const projectData = Projects[params.name as keyof typeof Projects];
@@ -23,16 +23,7 @@ const ProjectPage = async ({ params }: { params: { name: string } }) => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center px-2 md:mx-2 md:px-32 pt-20 md:py-24">
-      <div className="w-full max-w-screen-2xl h-full py-4 pb-16 md:h-[500px] bg-secondary/[7%] border-2 border-white/10 rounded-md px-auto md:py-8 flex items-center justify-center md:mb-8">
-        <div className="md:w-auto md:h-full w-full h-auto  aspect-video relative">
-          <Image
-            src={projectData.image}
-            alt="zdjecie tymczasowe"
-            fill
-            className="rounded-md"
-          />
-        </div>
-      </div>
+      <ManualSlider images={projectData.images} />
 
       <section className="grid grid-cols-1 text-sm md:text-base md:grid-cols-4 md:grid-rows-2 w-full text-white gap-3 max-w-screen-2xl mt-4 px-2">
         <div className="flex flex-col w-full md:col-span-2">

@@ -6,7 +6,12 @@
     "image": "/images/Prestika/Prestika1.webp",
     "technologies": ["React", "Sanity.io", "Taliwindcss"],
     "github": "",
-    "deployment_url": "https://www.prestika.pl"
+    "deployment_url": "https://www.prestika.pl",
+    "images": [
+      "/images/Prestika/Prestika1.webp",
+      "/images/Prestika/Prestika2.webp",
+      "/images/Prestika/Prestika3.webp"
+    ]
   },
   {
     "id": "foodiebuddy",
@@ -22,6 +27,11 @@
       "Taliwindcss"
     ],
     "github": "https://github.com/j-lewandowski/foodiebuddy",
-    "deployment_url": "https://foodiebuddy.vercel.app"
+    "deployment_url": "https://foodiebuddy.vercel.app",
+    "images": [
+      "/images/Foodiebuddy/1.webp",
+      "/images/Foodiebuddy/1.webp",
+      "/images/Foodiebuddy/1.webp"
+    ]
   }
 ]

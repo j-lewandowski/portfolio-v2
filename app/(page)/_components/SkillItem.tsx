@@ -14,9 +14,7 @@ const SkillItem = ({ children, iterator }: SkillItemProps) => {
         </div>
       </div>
       <div
-        className={`w-8 h-[150%] rotate-[${
-          iterator * 32
-        }] absolute bg-transparent -z-[15] animate-spinSlow group-hover:bg-white duration-200`}
+        className={`w-8 h-[150%] absolute bg-transparent -z-[15] animate-spinSlow group-hover:bg-white duration-200`}
       ></div>
     </div>
   );
