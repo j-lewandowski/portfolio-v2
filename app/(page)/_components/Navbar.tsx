@@ -24,6 +24,12 @@ const Navbar = () => {
 
   const { isOpen, toggle, close } = useNavbar();
 
+  const handleResume = () => {
+    const pdf = "/docs/CV.pdf";
+
+    window.open(pdf, "_blank");
+  };
+
   return (
     <>
       <nav className="w-full h-16 text-white md:text-xl font-bold justify-between px-12 md:px-0 md:justify-around items-center backdrop-blur fixed z-30 flex">
@@ -50,12 +56,16 @@ const Navbar = () => {
           >
             Projects
           </Link>
-          {/* <Link
-          href="/blog"
-          className={pathName === "/blog" ? "text-white" : "text-secondary"}
-        >
-          Blog
-        </Link> */}
+          <a
+            onClick={handleResume}
+            className={
+              pathName === "/projects"
+                ? "text-white hover:cursor-pointer"
+                : "text-secondary hover:cursor-pointer"
+            }
+          >
+            Resume
+          </a>
         </ul>
         <div
           className="md:hidden h-12 aspect-square bg-secondary/[7%] rounded-md border-white/10 border-2 relative"
@@ -99,6 +109,14 @@ const Navbar = () => {
             >
               Projects
             </Link>
+            <span
+              onClick={handleResume}
+              className={
+                pathName === "/projects" ? "text-white" : "text-secondary"
+              }
+            >
+              Resume
+            </span>
           </ul>
           <div className="flex-col items-center font-thin text-xs text-wrap flex text-secondary absolute bottom-6">
             <span>Designed & created by Jakub Lewandowski</span>
