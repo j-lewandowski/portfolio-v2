@@ -3,7 +3,7 @@ import React from "react";
 const AboutMe = () => {
   return (
     <div className="w-full h-full text-white flex flex-col items-center justify-center">
-      <span className="text:xl md:text-4xl underline font-bold p-6">
+      <span className="text:xl md:text-4xl font-bold p-3 px-5 border-2 border-white/10 rounded-lg mb-4">
         About me
       </span>
       <p className="px-16 md:w-[700px] text-lg md:text-2xl text-secondary font-medium">
