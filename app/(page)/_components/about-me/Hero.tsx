@@ -11,7 +11,7 @@ const Hero = () => {
         alt="Hello"
         width={320}
         height={320}
-        loading="eager"
+        quality={100}
         priority
       />
       <span className="text-white w-full text-center font-bold text-xl md:text-4xl -mt-4">

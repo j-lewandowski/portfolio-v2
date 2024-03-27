@@ -14,8 +14,14 @@ interface useNavbarTypes {
 
 export const useNavbar = create<useNavbarTypes>((set) => ({
   isOpen: false,
-  open: () => set((state) => ({ isOpen: true })),
-  close: () => set((state) => ({ isOpen: false })),
+  open: () => {
+    document.body.style.height = "100vh";
+    set((state) => ({ isOpen: true }));
+  },
+  close: () => {
+    document.body.style.height = "fit-content";
+    set((state) => ({ isOpen: false }));
+  },
   toggle: () => set((state) => ({ isOpen: !state.isOpen })),
 }));
 
@@ -57,12 +63,9 @@ const Navbar = () => {
             Projects
           </Link>
           <a
+            href="#"
             onClick={handleResume}
-            className={
-              pathName === "/projects"
-                ? "text-white hover:cursor-pointer"
-                : "text-secondary hover:cursor-pointer"
-            }
+            className={"text-secondary hover:cursor-pointer"}
           >
             Resume
           </a>
@@ -109,12 +112,7 @@ const Navbar = () => {
             >
               Projects
             </Link>
-            <span
-              onClick={handleResume}
-              className={
-                pathName === "/projects" ? "text-white" : "text-secondary"
-              }
-            >
+            <span onClick={handleResume} className={"text-secondary"}>
               Resume
             </span>
           </ul>
