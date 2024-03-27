@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 const SFPro = localFont({
   src: [
-    { path: "../../public/fonts/SF-Pro-Text-Thin.otf", weight: "100" },
-    { path: "../../public/fonts/SF-Pro-Text-Regular.otf", weight: "400" },
-    { path: "../../public/fonts/SF-Pro-Text-Medium.otf", weight: "500" },
-    { path: "../../public/fonts/SF-Pro-Text-Bold.otf", weight: "700" },
-    { path: "../../public/fonts/SF-Pro.ttf", weight: "300" },
+    { path: "../../public/fonts/SF-Pro-Text-Thin.woff2", weight: "100" },
+    { path: "../../public/fonts/SF-Pro-Text-Regular.woff2", weight: "400" },
+    { path: "../../public/fonts/SF-Pro-Text-Medium.woff2", weight: "500" },
+    { path: "../../public/fonts/SF-Pro-Text-Bold.woff2", weight: "700" },
+    { path: "../../public/fonts/SF-Pro.woff2", weight: "300" },
   ],
   variable: "--font-SFPro",
 });

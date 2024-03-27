@@ -3,7 +3,7 @@
     "id": "prestika",
     "name": "Prestika Website",
     "description": "Custom made website for my neighbour’s business connected to Sanity.io CMS for easy content managment.",
-    "image": "/images/prestika.png",
+    "image": "/images/Prestika/Prestika1.webp",
     "technologies": ["React", "Sanity.io", "Taliwindcss"],
     "github": "",
     "deployment_url": "https://www.prestika.pl"
@@ -12,7 +12,7 @@
     "id": "foodiebuddy",
     "name": "Foodiebuddy",
     "description": "A web application that is a tierlist of restaurants visited. Created to rate food outlets and mark their locations on the map, while creating a rich map of memories and places to return to.",
-    "image": "/images/prestika.png",
+    "image": "/images/Foodiebuddy/1.webp",
     "technologies": [
       "React",
       "Next.js",
