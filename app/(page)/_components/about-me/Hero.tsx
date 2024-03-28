@@ -7,7 +7,7 @@ const Hero = () => {
         <span className="px-4 py-3 text-black bg-white rounded-xl">Jakub</span>
       </div>
       <Image
-        src="/images/hello.svg"
+        src="/images/hello.webp"
         alt="Hello"
         width={320}
         height={320}
