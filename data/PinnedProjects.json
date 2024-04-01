@@ -39,7 +39,7 @@
     "id": "spotify-hub",
     "name": "Spotify Hub",
     "description": "A web application that connects to the Spotify API to display statistics on the most frequently listened tracks and artists over various time periods.",
-    "image": "/images/Foodiebuddy/1.webp",
+    "image": "/images/SpotifyHub/Spoti1.webp",
     "technologies": ["React", "Next.js", "NextAuth", "Chart.js", "Taliwindcss"],
     "github": "https://github.com/j-lewandowski/spotify-hub",
     "deployment_url": "https://spotify-hub-ten.vercel.app",
