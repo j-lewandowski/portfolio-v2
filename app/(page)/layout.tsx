@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 import Image from "next/image";
 import localFont from "next/font/local";
 import "../globals.css";
@@ -10,14 +11,20 @@ export const metadata: Metadata = {
   description: "Portfolio website",
 };
 
-const SFPro = localFont({
-  src: [
-    { path: "../../public/fonts/SF-Pro-Text-Thin.woff2", weight: "100" },
-    { path: "../../public/fonts/SF-Pro-Text-Regular.woff2", weight: "400" },
-    { path: "../../public/fonts/SF-Pro-Text-Medium.woff2", weight: "500" },
-    { path: "../../public/fonts/SF-Pro-Text-Bold.woff2", weight: "700" },
-    { path: "../../public/fonts/SF-Pro.woff2", weight: "300" },
-  ],
+// const SFPro = localFont({
+//   src: [
+//     { path: "../../public/fonts/SF-Pro-Text-Thin.woff2", weight: "100" },
+//     { path: "../../public/fonts/SF-Pro-Text-Regular.woff2", weight: "400" },
+//     { path: "../../public/fonts/SF-Pro-Text-Medium.woff2", weight: "500" },
+//     { path: "../../public/fonts/SF-Pro-Text-Bold.woff2", weight: "700" },
+//     { path: "../../public/fonts/SF-Pro.woff2", weight: "300" },
+//   ],
+//   variable: "--font-SFPro",
+// });
+
+const font = Roboto({
+  weight: ["100", "400", "500", "700", "300"],
+  subsets: ["latin"],
   variable: "--font-SFPro",
 });
 
@@ -29,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${SFPro.variable} font-sans bg-primary relative overflow-y-visible`}
+        className={`${font.variable} font-sans bg-primary relative overflow-y-visible`}
       >
         <Navbar />
         <main>{children}</main>
