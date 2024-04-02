@@ -16,7 +16,8 @@ const config: Config = {
         "bagde-text": "#81E685",
       },
       fontFamily: {
-        sans: ["var(--font-SFPro)"],
+        // sans: ["var(--font-SFPro)"],
+        sand: ["var(SF Pro Display)"],
       },
       animation: {
         slideFromRight: "slideFromRight 0.15s ease-out forwards",
