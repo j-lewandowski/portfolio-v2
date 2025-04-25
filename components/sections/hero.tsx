@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { heroData } from "@/data/hero";
 import { motion, useInView } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 import Image from "next/image";
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 export function Hero() {
   const ref = useRef(null);
@@ -54,7 +54,7 @@ export function Hero() {
               className="absolute top-0 left-[60%] -translate-x-1/2 -translate-y-1/4"
             >
               <div className="flex w-48 justify-center items-center bg-background border border-border rounded-full px-4 py-2 shadow-lg">
-                <span className="mr-2 text-lg">Hi, I&apos;m</span>
+                <span className="mr-2 text-md">{heroData.bubbleText}</span>
                 <span className="font-bold text-lg bg-primary text-primary-foreground px-3 py-1 rounded-md">
                   Jakub
                 </span>
@@ -68,7 +68,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold tracking-tight"
           >
-            Junior Fullstack Developer
+            {heroData.title}
           </motion.h1>
 
           <motion.div
@@ -77,11 +77,14 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="flex items-center gap-3 text-lg text-muted-foreground"
           >
-            <span>React</span>
-            <span className="h-1 w-1 rounded-full bg-muted-foreground"></span>
-            <span>Next.js</span>
-            <span className="h-1 w-1 rounded-full bg-muted-foreground"></span>
-            <span>TypeScript</span>
+            {heroData.techStack.map((tech, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && (
+                  <span className="h-1 w-1 rounded-full bg-muted-foreground"></span>
+                )}
+                <span className="text-md">{tech}</span>
+              </React.Fragment>
+            ))}
           </motion.div>
 
           <motion.div
@@ -99,28 +102,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 1,
-          duration: 1,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      >
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={scrollToNextSection}
-          className="rounded-full"
-        >
-          <ArrowDown className="h-6 w-6" />
-          <span className="sr-only">Scroll down</span>
-        </Button>
-      </motion.div>
     </section>
   );
 }

@@ -21,32 +21,36 @@ export const About = () => {
             className="prose prose-lg dark:prose-invert"
           >
             <p>
-              Hi, I&apos;m Jakub Lewandowski and I&apos;m a Software Engineer.
-              I&apos;m a React.js enthusiast specialising in full-stack
-              development.
+              Hi, I&apos;m Jakub Lewandowski — a Junior Fullstack Developer at
+              Mood Up
             </p>
             <p>
-              My journey in web development started with a fascination for
-              creating interactive user experiences. Over time, I&apos;ve honed
-              my skills in modern JavaScript frameworks, with a particular focus
-              on the React ecosystem.
+              My journey in web development began with a curiosity for building
+              engaging digital experiences. Since then, I&apos;ve developed a
+              solid foundation in fullstack development, with a particular
+              strength on the backend — especially working with NestJS.
             </p>
             <p>
-              At the moment I&apos;m employed as a tutor at{" "}
+              Currently, I&apos;m part of the team at{" "}
               <a
-                href="https://www.ambitni.edu.pl/"
+                href="https://moodup.team/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                AMBITNI
+                Mood Up
               </a>
-              , an online IT school where I help aspiring developers master the
-              fundamentals of web development.
+              , where I contribute to building robust, user-friendly
+              applications across the stack. On a daily basis, I focus on
+              maintaining and developing scalable backend solutions, designing
+              APIs, and ensuring smooth integration with the frontend.
             </p>
             <p>
-              When I&apos;m not coding, you can find me exploring new
-              technologies, contributing to open-source projects, or sharing my
-              knowledge through tutorials and blog posts.
+              Outside of work, I enjoy exploring new technologies — lately, that
+              curiosity has led me to dive into the fundamentals of machine
+              learning. I&apos;m currently focused on learning how to build and
+              train models from scratch, and understanding the core principles
+              that power intelligent systems. You&apos;ll also often find me on
+              the badminton court, unwinding with a good game.
             </p>
           </motion.div>
         </div>

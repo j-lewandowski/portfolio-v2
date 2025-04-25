@@ -7,41 +7,7 @@ import { motion, useInView } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { useRef } from "react";
 
-interface ProfessionalExperienceItem {
-  date: string;
-  title: string;
-  description: string;
-}
-
-interface EducationalExperienceItem {
-  date: string;
-  title: string;
-  description: string;
-}
-
-const professionalExperience: ProfessionalExperienceItem[] = [
-  {
-    date: "2024 - Present",
-    title: "Junior Fullstack Developer @ Mood Up",
-    description:
-      "Developing and maintaining web applications using React, NestJS. Collaborating with cross-functional teams to deliver high-quality software solutions.",
-  },
-  {
-    date: "2022 - Present",
-    title: "Tutor @ AMBITNI",
-    description:
-      "Teaching programming to students and preparing them for computer science final exams. Focusing on developing practical coding skills and theoretical knowledge.",
-  },
-];
-
-const educationalExperience: EducationalExperienceItem[] = [
-  {
-    date: "2021 - 2025",
-    title: "Computer Science Degree @ Collegium Da Vinci Poznań",
-    description:
-      "Studied computer science with a focus on web technologies and software engineering principles.",
-  },
-];
+import { educationalExperience, professionalExperience } from "@/data/career";
 
 export function Timeline() {
   const ref = useRef(null);
@@ -49,7 +15,6 @@ export function Timeline() {
 
   return (
     <section id="timeline" className="py-20 md:py-32 bg-mesh-gradient relative">
-      {/* Decorative elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
       <div className="container px-4 mx-auto relative z-10">
