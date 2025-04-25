@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { IProject } from "@/data/projects";
 import { ExternalLink, Github } from "lucide-react";
 
-export const ProjectLinks = ({ project }: { project: any }) => {
+export const ProjectLinks = ({ project }: { project: IProject }) => {
   return (
     <Card>
       <CardHeader>
@@ -18,10 +19,10 @@ export const ProjectLinks = ({ project }: { project: any }) => {
           </Button>
         )}
 
-        {project.deployment_url && (
+        {project.deploymentUrl && (
           <Button variant="outline" className="w-full justify-start" asChild>
             <a
-              href={project.deployment_url}
+              href={project.deploymentUrl}
               target="_blank"
               rel="noopener noreferrer"
             >

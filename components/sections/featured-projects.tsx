@@ -1,4 +1,5 @@
 "use client";
+import { getFeaturedProjects } from "@/lib/projects";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -7,26 +8,7 @@ import { Button } from "../ui/button";
 import { ProjectCard } from "../ui/project-card";
 import { SectionHeading } from "../ui/section-heading";
 
-const featuredProjects = [
-  {
-    id: "1",
-    name: "Project One",
-    description: "A brief description of Project One.",
-    technologies: ["React", "Node.js", "Tailwind CSS"],
-  },
-  {
-    id: "2",
-    name: "Project Two",
-    description: "A brief description of Project Two.",
-    technologies: ["Next.js", "Prisma", "TypeScript"],
-  },
-  {
-    id: "3",
-    name: "Project Three",
-    description: "A brief description of Project Three.",
-    technologies: ["Python", "Flask", "SQLAlchemy"],
-  },
-];
+const featuredProjects = getFeaturedProjects();
 
 export const FeaturedProjects = () => {
   const ref = useRef(null);

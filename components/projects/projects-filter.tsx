@@ -1,19 +1,15 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { getPossibleFilters } from "@/lib/projects";
+import { useProjects } from "@/store/projects.store";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 export const ProjectsFilter = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-  const technologies = [
-    "All",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Python",
-    "JavaScript",
-  ];
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+  const technologies = getPossibleFilters();
+  const { toggleFilter, filters } = useProjects();
 
   return (
     <motion.div
@@ -26,11 +22,9 @@ export const ProjectsFilter = () => {
         {technologies.map((tech) => (
           <Button
             key={tech}
-            variant={
-              activeFilter === tech.toLowerCase() ? "default" : "outline"
-            }
+            variant={filters.includes(tech) ? "default" : "outline"}
             size="sm"
-            onClick={() => setActiveFilter(tech.toLowerCase())}
+            onClick={() => toggleFilter(tech)}
             className="capitalize"
           >
             {tech}

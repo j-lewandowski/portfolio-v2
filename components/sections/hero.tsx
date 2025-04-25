@@ -96,9 +96,9 @@ export function Hero() {
             <Button size="lg" asChild>
               <a href="#projects">View Projects</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            {/* <Button size="lg" variant="outline" asChild>
               <a href="#contact">Contact Me</a>
-            </Button>
+            </Button> */}
           </motion.div>
         </motion.div>
       </div>

@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import { IProject } from "@/data/projects";
 import { formatDate } from "@/lib/utils";
 import { Calendar, Clock } from "lucide-react";
 
-export const ProjectHeader = ({ project }: { project: any }) => {
+export const ProjectHeader = ({ project }: { project: IProject }) => {
   return (
     <div className="mb-8">
       <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -12,12 +13,12 @@ export const ProjectHeader = ({ project }: { project: any }) => {
       <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
         <div className="flex items-center gap-1.5">
           <Calendar className="h-4 w-4" />
-          <span>Last updated: {formatDate(new Date())}</span>
+          <span>Last updated: {formatDate(project.lastUpdated)}</span>
         </div>
 
         <div className="flex items-center gap-1.5">
           <Clock className="h-4 w-4" />
-          <span>Status: Completed</span>
+          <span>Status: {project.status}</span>
         </div>
       </div>
 

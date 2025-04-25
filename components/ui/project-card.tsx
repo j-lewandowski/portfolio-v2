@@ -1,21 +1,21 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { IProject } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-export const ProjectCard = ({ project }: { project: any }) => {
+export const ProjectCard = ({ project }: { project: IProject }) => {
   return (
     <Card className="overflow-hidden group border-primary/10 transition-all hover:border-primary/30 hover:shadow-md hover:shadow-primary/5">
       <div className="aspect-video relative overflow-hidden bg-secondary">
-        {/* Enhanced placeholder with project-specific styling */}
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-transparent relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(142_70%_45%/0.15),transparent_70%)]"></div>
-          <div className="relative z-10 flex flex-col items-center">
-            <div className="text-4xl mb-2">🖥️</div>
-            <div className="text-sm text-primary font-medium">
-              {project.name}
-            </div>
-          </div>
+          <Image
+            src={project.images[0]}
+            alt="Project image"
+            className="aspect-video relative overflow-hidden bg-secondary"
+            fill
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
