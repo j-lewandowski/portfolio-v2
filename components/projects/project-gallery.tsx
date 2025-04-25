@@ -3,13 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Monitor,
-  Smartphone,
-  Tablet,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export const ProjectGallery = ({ images }: { images: string[] }) => {
@@ -23,15 +18,9 @@ export const ProjectGallery = ({ images }: { images: string[] }) => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  const deviceIcons = [
-    <Monitor key="monitor" className="h-12 w-12 text-primary" />,
-    <Smartphone key="smartphone" className="h-12 w-12 text-primary" />,
-    <Tablet key="tablet" className="h-12 w-12 text-primary" />,
-  ];
-
   return (
     <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-card shadow-lg shadow-primary/5">
-      <div className="aspect-video relative overflow-hidden">
+      <div className="aspect-video h-[80%] relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -41,17 +30,14 @@ export const ProjectGallery = ({ images }: { images: string[] }) => {
             transition={{ duration: 0.3 }}
             className="absolute inset-0 bg-secondary flex items-center justify-center"
           >
-            {/* Enhanced placeholder with device mockups */}
-            <div className="relative w-full h-full">
+            <div className="relative h-full w-full">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,hsl(142_70%_45%/0.15),transparent_70%)]"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                {deviceIcons[currentIndex % deviceIcons.length]}
-                <div className="mt-4 text-lg font-medium text-primary">
-                  Project View {currentIndex + 1}
-                </div>
-                <div className="mt-2 text-sm text-muted-foreground">
-                  Responsive design showcase
-                </div>
+                <Image
+                  alt="Project image"
+                  src={images[currentIndex % images.length]}
+                  fill
+                />
               </div>
             </div>
           </motion.div>

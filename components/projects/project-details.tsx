@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { IProject } from "@/data/projects";
 
-export const ProjectDetails = ({ project }: { project: any }) => {
+export const ProjectDetails = ({ project }: { project: IProject }) => {
   return (
     <Card>
       <CardHeader>
@@ -11,21 +12,14 @@ export const ProjectDetails = ({ project }: { project: any }) => {
           <h3 className="text-sm font-medium text-muted-foreground mb-1">
             Project Type
           </h3>
-          <p>Web Application</p>
+          <p>{project.type}</p>
         </div>
 
         <div>
           <h3 className="text-sm font-medium text-muted-foreground mb-1">
             Timeline
           </h3>
-          <p>2023</p>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-medium text-muted-foreground mb-1">
-            Role
-          </h3>
-          <p>Full-stack Developer</p>
+          <p>{project.timeline}</p>
         </div>
       </CardContent>
     </Card>
