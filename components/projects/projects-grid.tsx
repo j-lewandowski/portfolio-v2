@@ -25,7 +25,7 @@ const featuredProjects = [
   },
 ];
 
-export function ProjectsGrid() {
+export const ProjectsGrid = () => {
   const [projects, setProjects] = useState(featuredProjects);
 
   return (
@@ -51,4 +51,4 @@ export function ProjectsGrid() {
       </div>
     </motion.div>
   );
-}
+};
