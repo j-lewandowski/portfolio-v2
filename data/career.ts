@@ -6,7 +6,12 @@ export interface ITimelineItem {
 
 export const professionalExperience: ITimelineItem[] = [
   {
-    date: "2024 - Present",
+    date: "2025 - Present",
+    title: "Junior Python Developer @ BlockWise",
+    description: "",
+  },
+  {
+    date: "2024 - 2025",
     title: "Junior Fullstack Developer @ Mood Up",
     description:
       "Developing and maintaining web applications using React, NestJS. Collaborating with cross-functional teams to deliver high-quality software solutions.",
