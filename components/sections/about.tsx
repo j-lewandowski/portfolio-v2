@@ -31,18 +31,25 @@ export const About = () => {
               strength on the backend — especially working with NestJS.
             </p>
             <p>
-              Currently, I&apos;m part of the team at{" "}
+              Currently, I&apos;m working at{" "}
               <a
-                href="https://moodup.team/"
+                href="https://blockwise.pl/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Mood Up
+                BlockWise
+              </a>{" "}
+              as a Junior Python Developer, where I build and deploy machine
+              learning models. I also actively contribute to{" "}
+              <a
+                href="https://bittensor.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bittensor
               </a>
-              , where I contribute to building robust, user-friendly
-              applications across the stack. On a daily basis, I focus on
-              maintaining and developing scalable backend solutions, designing
-              APIs, and ensuring smooth integration with the frontend.
+              , collaborating on decentralized AI infrastructure and related
+              projects.
             </p>
             <p>
               Outside of work, I enjoy exploring new technologies — lately, that
