@@ -3,7 +3,7 @@
   <h1> Jakub Lewandowski </br> Portfolio Website</h1>
 </div>
 
-![demo](https://github.com/j-lewandowski/portfolio-v2/blob/main/public/images/screenshot.png)
+![demo](https://github.com/j-lewandowski/portfolio-v2/blob/main/public/images/this-portfolio/hero.png)
 
 # Description
 

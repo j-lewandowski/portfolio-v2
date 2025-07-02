@@ -40,16 +40,7 @@ export const About = () => {
                 BlockWise
               </a>{" "}
               as a Junior Python Developer, where I build and deploy machine
-              learning models. I also actively contribute to{" "}
-              <a
-                href="https://bittensor.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Bittensor
-              </a>
-              , collaborating on decentralized AI infrastructure and related
-              projects.
+              learning models.
             </p>
             <p>
               Outside of work, I enjoy exploring new technologies — lately, that
