@@ -20,10 +20,7 @@ export const About = () => {
             transition={{ duration: 0.5 }}
             className="prose prose-lg dark:prose-invert"
           >
-            <p>
-              Hi, I&apos;m Jakub Lewandowski — a Junior Fullstack Developer at
-              Mood Up
-            </p>
+            <p>Hi, I&apos;m Jakub Lewandowski</p>
             <p>
               My journey in web development began with a curiosity for building
               engaging digital experiences. Since then, I&apos;ve developed a
