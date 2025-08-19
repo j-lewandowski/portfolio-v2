@@ -90,4 +90,22 @@ export const projects: IProject[] = [
     lastUpdated: new Date("01.24.2023"),
     deploymentUrl: "https://prestika.pl",
   },
+  {
+    id: "sautu",
+    name: "Sautu",
+    description:
+      "A simple website for a local sauna selling company, built with HTML and CSS. The site showcases the company's range of saunas, provides information about available models, and features a gallery of completed installations. Designed to help customers learn about sauna options and easily get in touch for inquiries.",
+    technologies: ["HTML", "CSS"],
+    images: [
+      "/images/sautu/hero.png",
+      "/images/sautu/saunas.png",
+      "/images/sautu/gallery.png",
+    ],
+    type: "Website",
+    timeline: "2025",
+    isPinned: false,
+    status: ProjectStatus.COMPLETED,
+    lastUpdated: new Date("08.25.2025"),
+    deploymentUrl: "https://www.sautu.pl",
+  },
 ];

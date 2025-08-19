@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Jakub Lewandowski - Fullstack Developer",
   description:
-    "Portfolio of Jakub Lewandowski, a Fullstack Developer specializing in React, Node.js, and TypeScript.",
+    "Fullstack Developer specializing in React, Node.js, TypeScript, and backend (NestJS). Passionate about machine learning and building modern web applications.",
 };
 
 export const viewport: Viewport = {
