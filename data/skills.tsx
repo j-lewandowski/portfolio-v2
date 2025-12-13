@@ -25,72 +25,72 @@ export const skills: ISkill[] = [
   // Frontend
   {
     name: "Typescript",
-    icon: <SiTypescript className="h-12 w-12 text-primary" />,
+    icon: <SiTypescript className="text-primary" />,
   },
   {
     name: "React",
-    icon: <SiReact className="h-12 w-12 text-primary" />,
+    icon: <SiReact className="text-primary" />,
   },
   {
     name: "Next.js",
-    icon: <SiNextdotjs className="h-12 w-12 text-primary" />,
+    icon: <SiNextdotjs className="text-primary" />,
   },
 
   // Backend
   {
     name: "Node.js",
-    icon: <SiNodedotjs className="h-12 w-12 text-primary" />,
+    icon: <SiNodedotjs className="text-primary" />,
   },
   {
     name: "NestJS",
-    icon: <SiNestjs className="h-12 w-12 text-primary" />,
+    icon: <SiNestjs className="text-primary" />,
   },
   {
     name: "Express",
-    icon: <SiExpress className="h-12 w-12 text-primary" />,
+    icon: <SiExpress className="text-primary" />,
   },
 
   // Databases
   {
     name: "Prisma",
-    icon: <SiPrisma className="h-12 w-12 text-primary" />,
+    icon: <SiPrisma className="text-primary" />,
   },
   {
     name: "Postgres",
-    icon: <SiPostgresql className="h-12 w-12 text-primary" />,
+    icon: <SiPostgresql className="text-primary" />,
   },
   {
     name: "MongoDb",
-    icon: <SiMongodb className="h-12 w-12 text-primary" />,
+    icon: <SiMongodb className="text-primary" />,
   },
 
   // DevOps & Infrastructure
   {
     name: "Docker",
-    icon: <SiDocker className="h-12 w-12 text-primary" />,
+    icon: <SiDocker className="text-primary" />,
   },
   {
     name: "CircleCI",
-    icon: <SiCircleci className="h-12 w-12 text-primary" />,
+    icon: <SiCircleci className="text-primary" />,
   },
   {
     name: "Ansible",
-    icon: <SiAnsible className="h-12 w-12 text-primary" />,
+    icon: <SiAnsible className="text-primary" />,
   },
   {
     name: "Terraform",
-    icon: <SiTerraform className="h-12 w-12 text-primary" />,
+    icon: <SiTerraform className="text-primary" />,
   },
 
   // Other Languages
   {
     name: "Python",
-    icon: <SiPython className="h-12 w-12 text-primary" />,
+    icon: <SiPython className="text-primary" />,
   },
 
   // Testing
   {
     name: "Jest",
-    icon: <SiJest className="h-12 w-12 text-primary" />,
+    icon: <SiJest className="text-primary" />,
   },
 ];

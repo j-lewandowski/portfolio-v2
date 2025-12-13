@@ -75,12 +75,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex items-center gap-3 text-lg text-muted-foreground"
+            className="flex flex-wrap justify-center items-center gap-3 text-lg text-muted-foreground"
           >
             {heroData.techStack.map((tech, index) => (
               <React.Fragment key={index}>
                 {index > 0 && (
-                  <span className="h-1 w-1 rounded-full bg-muted-foreground"></span>
+                  <span className="hidden md:block h-1 w-1 rounded-full bg-muted-foreground"></span>
                 )}
                 <span className="text-md">{tech}</span>
               </React.Fragment>

@@ -1,5 +1,6 @@
 "use client";
 
+import { TechBackground } from "@/components/ui/tech-background";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SectionHeading } from "../ui/section-heading";
@@ -9,8 +10,10 @@ export const About = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" className="py-20 md:py-32">
-      <div className="container px-4 mx-auto">
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+      <TechBackground />
+
+      <div className="container px-4 mx-auto relative z-10">
         <SectionHeading>About Me</SectionHeading>
 
         <div ref={ref} className="max-w-3xl mx-auto mt-12">
@@ -20,10 +23,7 @@ export const About = () => {
             transition={{ duration: 0.5 }}
             className="prose prose-lg dark:prose-invert"
           >
-            <p>
-              Hi, I&apos;m Jakub Lewandowski — a Junior Fullstack Developer at
-              Mood Up
-            </p>
+            <p>Hi, I&apos;m Jakub Lewandowski</p>
             <p>
               My journey in web development began with a curiosity for building
               engaging digital experiences. Since then, I&apos;ve developed a
@@ -31,18 +31,16 @@ export const About = () => {
               strength on the backend — especially working with NestJS.
             </p>
             <p>
-              Currently, I&apos;m part of the team at{" "}
+              Currently, I&apos;m working at{" "}
               <a
-                href="https://moodup.team/"
+                href="https://blockwise.pl/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Mood Up
-              </a>
-              , where I contribute to building robust, user-friendly
-              applications across the stack. On a daily basis, I focus on
-              maintaining and developing scalable backend solutions, designing
-              APIs, and ensuring smooth integration with the frontend.
+                BlockWise
+              </a>{" "}
+              as a Junior Python Developer, where I build and deploy machine
+              learning models.
             </p>
             <p>
               Outside of work, I enjoy exploring new technologies — lately, that
