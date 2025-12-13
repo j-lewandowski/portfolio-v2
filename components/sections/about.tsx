@@ -1,5 +1,6 @@
 "use client";
 
+import { TechBackground } from "@/components/ui/tech-background";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SectionHeading } from "../ui/section-heading";
@@ -9,8 +10,10 @@ export const About = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" className="py-20 md:py-32">
-      <div className="container px-4 mx-auto">
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+      <TechBackground />
+
+      <div className="container px-4 mx-auto relative z-10">
         <SectionHeading>About Me</SectionHeading>
 
         <div ref={ref} className="max-w-3xl mx-auto mt-12">

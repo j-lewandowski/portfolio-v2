@@ -22,10 +22,6 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname = usePathname();
 
-  const handleResume = () => {
-    window.open("/docs/CV.pdf", "_blank");
-  };
-
   return (
     <header
       className={cn(
@@ -68,9 +64,6 @@ export const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <Button onClick={handleResume} variant="outline" size="sm">
-            Resume
-          </Button>
         </nav>
 
         <Button
@@ -125,15 +118,6 @@ export const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navItems.length * 0.1 }}
-              >
-                <Button onClick={handleResume} size="lg">
-                  Resume
-                </Button>
-              </motion.div>
             </div>
           </motion.div>
         )}

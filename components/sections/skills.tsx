@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SkillCard } from "@/components/ui/skill-card";
 import { skills } from "@/data/skills";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 export const Skills = () => {
   const ref = useRef(null);
@@ -28,7 +28,9 @@ export const Skills = () => {
             >
               <SkillCard>
                 <div className="mx-auto mb-4 flex justify-center">
-                  {skill.icon}
+                  {React.cloneElement(skill.icon, {
+                    className: "h-12 w-12 text-primary",
+                  })}
                 </div>
                 <h3 className="text-center font-medium">{skill.name}</h3>
               </SkillCard>
