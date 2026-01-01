@@ -1,6 +1,7 @@
 import {aboutMePageType} from './about-me-page'
 import {experiencePageType} from './experience-page'
 import {heroPageType} from './hero-page'
+import {projectType} from './project'
 import {skillsPageType} from './skills-page'
 import {technologyType} from './technology'
 import {timelineItemType} from './timeline-item'
@@ -12,4 +13,5 @@ export const schemaTypes = [
   technologyType,
   timelineItemType,
   experiencePageType,
+  projectType,
 ]
