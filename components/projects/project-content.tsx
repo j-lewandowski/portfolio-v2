@@ -1,6 +1,6 @@
-import { IProject } from "@/data/projects";
+import { Project } from "@/types";
 
-export const ProjectContent = ({ project }: { project: IProject }) => {
+export const ProjectContent = ({ project }: { project: Project }) => {
   return (
     <div className="prose prose-lg dark:prose-invert max-w-none">
       <h2>Overview</h2>

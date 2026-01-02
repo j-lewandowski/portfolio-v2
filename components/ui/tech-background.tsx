@@ -1,14 +1,13 @@
 "use client";
 
-import { skills } from "@/data/skills";
-import React from "react";
+import { SkillItem } from "@/types";
 
-export const TechBackground = () => {
-  const backgroundSkills = skills;
+export const TechBackground = ({ skills }: { skills: SkillItem[] }) => {
+  if (!skills) return null;
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-      {backgroundSkills.map((skill, index) => {
+      {skills.map((skill, index) => {
         const row = Math.floor(index / 3);
         const col = index % 3;
 
@@ -16,22 +15,25 @@ export const TechBackground = () => {
         const left = 10 + col * 30 + (row % 2) * 15;
 
         const rotate = -15 + ((index * 10) % 30);
-
         const scale = 1.2 + (index % 2) * 0.3;
 
         return (
           <div
-            key={index}
-            className="absolute opacity-5"
+            key={skill.name}
+            className="absolute opacity-10 z-0"
             style={{
               top: `${top}%`,
               left: `${left}%`,
               transform: `rotate(${rotate}deg) scale(${scale})`,
             }}
           >
-            {React.cloneElement(skill.icon, {
-              className: "w-16 h-16 text-foreground",
-            })}
+            <img
+              src={skill.iconUrl}
+              alt={skill.name}
+              width={48}
+              height={48}
+              className="object-contain invert"
+            />
           </div>
         );
       })}

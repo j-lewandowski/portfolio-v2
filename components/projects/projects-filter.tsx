@@ -1,15 +1,20 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { getPossibleFilters } from "@/lib/projects";
 import { useProjects } from "@/store/projects.store";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ProjectsFilter = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("All");
-  const technologies = getPossibleFilters();
-  const { toggleFilter, filters } = useProjects();
+  const { toggleFilter, filters, allProjects } = useProjects();
+  const [technologies, setTechnologies] = useState<string[]>([]);
+
+  useEffect(() => {
+    const techs = Array.from(
+      new Set(allProjects.flatMap((p) => p.technologies))
+    ).sort();
+    setTechnologies(["All", ...techs]);
+  }, [allProjects]);
 
   return (
     <motion.div
