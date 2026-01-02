@@ -16,3 +16,14 @@ type SkillItem = {
 type SkillsPageContent = {
   skills: SkillItem[];
 };
+
+type TimelineItem = {
+  date: string;
+  title: string;
+  description: string;
+};
+
+type ExperiencePageContent = {
+  professionalExperience: TimelineItem[];
+  educationalExperience: TimelineItem[];
+};

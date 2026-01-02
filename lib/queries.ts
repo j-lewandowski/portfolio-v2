@@ -27,3 +27,12 @@ export const getSkills = async (): Promise<SkillsPageContent> => {
     }
   `);
 };
+
+export const getExperience = async (): Promise<ExperiencePageContent> => {
+  return sanity.fetch<ExperiencePageContent>(`
+    *[_type == "experiencePage"][0]{
+      professionalExperience,
+      educationalExperience
+    }
+  `);
+};

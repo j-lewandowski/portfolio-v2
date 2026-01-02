@@ -3,7 +3,7 @@ import { About } from "@/components/sections/about/about";
 import { FeaturedProjects } from "@/components/sections/featured-projects";
 import { Hero } from "@/components/sections/hero/hero";
 import { Skills } from "@/components/sections/skills/skills";
-import { Timeline } from "@/components/sections/timeline";
+import { Timeline } from "@/components/sections/timeline/timeline";
 import { getSkills } from "@/lib/queries";
 
 export default async function Home() {
