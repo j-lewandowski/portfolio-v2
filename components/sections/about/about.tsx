@@ -1,6 +1,7 @@
 import { TechBackground } from "@/components/ui/tech-background";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { AboutMotion } from "./about-motion";
+import { SkillsPageContent } from "@/types";
 
 export async function About({
   skillsPageContent,

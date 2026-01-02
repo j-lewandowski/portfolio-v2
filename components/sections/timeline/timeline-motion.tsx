@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TimelineItem } from "@/components/ui/timeline-item";
+import { ExperiencePageContent } from "@/types";
 import { motion, useInView } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { useRef } from "react";

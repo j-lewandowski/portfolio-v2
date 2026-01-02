@@ -3,11 +3,15 @@ import { ProjectDetails } from "@/components/projects/project-details";
 import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ProjectHeader } from "@/components/projects/project-header";
 import { ProjectLinks } from "@/components/projects/project-links";
-import { getProjectBySlug } from "@/lib/projects";
+import { getProject } from "@/lib/queries";
 import { notFound } from "next/navigation";
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const project = await getProject(params.slug);
 
   if (!project) {
     notFound();

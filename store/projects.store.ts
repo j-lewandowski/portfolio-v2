@@ -1,20 +1,24 @@
-import { IProject } from "@/data/projects";
-import { getAllProjects } from "@/lib/projects";
+import { Project } from "@/types";
 import { create } from "zustand";
 
 export type ProjectsState = {
-  projects: IProject[];
+  projects: Project[];
+  allProjects: Project[];
   filters: string[];
 
+  setProjects: (projects: Project[]) => void;
   toggleFilter: (filter: string) => void;
 };
 
 export const useProjects = create<ProjectsState>((set, get) => ({
-  projects: getAllProjects(),
+  projects: [],
+  allProjects: [],
   filters: ["All"],
 
+  setProjects: (projects) => set({ projects, allProjects: projects }),
+
   toggleFilter: (tech) => {
-    const { filters } = get();
+    const { filters, allProjects } = get();
     let newFilters: string[];
 
     if (tech === "All") {
@@ -35,8 +39,8 @@ export const useProjects = create<ProjectsState>((set, get) => ({
     }
 
     const filteredProjects = newFilters.includes("All")
-      ? getAllProjects()
-      : getAllProjects().filter((project) =>
+      ? allProjects
+      : allProjects.filter((project) =>
           project.technologies.some((t) => newFilters.includes(t))
         );
 

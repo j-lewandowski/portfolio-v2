@@ -1,5 +1,7 @@
 "use client";
 
+import { SkillItem } from "@/types";
+
 export const TechBackground = ({ skills }: { skills: SkillItem[] }) => {
   if (!skills) return null;
 

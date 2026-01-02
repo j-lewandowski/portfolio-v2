@@ -1,13 +1,14 @@
 import { Navbar } from "@/components/layout/navbar";
 import { About } from "@/components/sections/about/about";
-import { FeaturedProjects } from "@/components/sections/featured-projects";
+import { FeaturedProjects } from "@/components/sections/featured-projects/featured-projects";
 import { Hero } from "@/components/sections/hero/hero";
 import { Skills } from "@/components/sections/skills/skills";
 import { Timeline } from "@/components/sections/timeline/timeline";
-import { getSkills } from "@/lib/queries";
+import { getFeaturedProjects, getSkills } from "@/lib/queries";
 
 export default async function Home() {
   const skillsPageContent = await getSkills();
+  const featuredProjects = await getFeaturedProjects();
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -17,7 +18,7 @@ export default async function Home() {
         <About skillsPageContent={skillsPageContent} />
         <Skills skillsPageContent={skillsPageContent} />
         <Timeline />
-        <FeaturedProjects />
+        <FeaturedProjects projects={featuredProjects} />
       </main>
     </div>
   );

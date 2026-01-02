@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { IProject } from "@/data/projects";
+import { Project } from "@/types";
 
-export const ProjectDetails = ({ project }: { project: IProject }) => {
+export const ProjectDetails = ({ project }: { project: Project }) => {
   return (
     <Card>
       <CardHeader>

@@ -1,6 +1,7 @@
 "use client";
 
 import { SkillCard } from "@/components/ui/skill-card";
+import { SkillItem } from "@/types";
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 

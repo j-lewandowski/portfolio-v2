@@ -3,9 +3,15 @@
 import { ProjectCard } from "@/components/ui/project-card";
 import { useProjects } from "@/store/projects.store";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
+import { Project } from "@/types";
 
-export const ProjectsGrid = () => {
-  const { projects } = useProjects();
+export const ProjectsGrid = ({ projects }: { projects: Project[] }) => {
+  const { projects: filteredProjects, setProjects } = useProjects();
+
+  useEffect(() => {
+    setProjects(projects);
+  }, [projects, setProjects]);
 
   return (
     <motion.div
@@ -15,9 +21,9 @@ export const ProjectsGrid = () => {
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence>
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={project.slug}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

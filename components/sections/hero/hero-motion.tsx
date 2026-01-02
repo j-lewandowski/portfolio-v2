@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
+import { HeroPageContent } from "@/types";
 
 export function HeroMotion({ hero }: { hero: HeroPageContent }) {
   const ref = useRef<HTMLDivElement>(null);

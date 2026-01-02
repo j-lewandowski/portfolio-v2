@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SkillsMotion } from "./skills-motion";
+import { SkillsPageContent } from "@/types";
 
 export function Skills({
   skillsPageContent,
