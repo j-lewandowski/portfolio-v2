@@ -19,7 +19,7 @@ export function HeroMotion({ hero }: { hero: HeroPageContent }) {
         className="flex flex-col items-center gap-6"
       >
         <Image
-          src="/images/hello.svg"
+          src={hero.imageUrl}
           alt="Jakub Lewandowski"
           width={280}
           height={280}
