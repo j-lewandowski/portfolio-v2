@@ -6,6 +6,6 @@ export interface IHero {
 
 export const heroData: IHero = {
   bubbleText: "Hello, I'm",
-  title: "Junior Fullstack Developer",
+  title: "Fullstack Developer",
   techStack: ["TypeScript", "React", "Next.js", "Node.js", "NestJS", "Python"],
 };
