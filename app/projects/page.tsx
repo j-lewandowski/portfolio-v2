@@ -1,6 +1,7 @@
 import { ProjectsFilter } from "@/components/projects/projects-filter";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { ProjectsHeader } from "@/components/projects/projects-header";
+import { getProjects } from "@/lib/queries";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,12 +31,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+
   return (
     <div className="flex-1 container mx-auto px-4 py-16 md:py-24">
       <ProjectsHeader />
       <ProjectsFilter />
-      <ProjectsGrid />
+      <ProjectsGrid projects={projects} />
     </div>
   );
 }
