@@ -95,6 +95,7 @@ export const getProject = async (slug: string): Promise<Project> => {
       "githubUrl": github,
       "liveUrl": deploymentUrl,
       "images": coalesce(images[].asset->url, []),
+      content,
       features,
       technicalDetails,
       challenges,

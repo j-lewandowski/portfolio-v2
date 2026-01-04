@@ -1,3 +1,5 @@
+import { PortableTextBlock } from "@portabletext/types";
+
 export type HeroPageContent = {
   title: string;
   imageUrl: string;
@@ -38,6 +40,7 @@ export type Project = {
   status: string;
   technologies: string[];
   githubUrl?: string;
+  content?: PortableTextBlock[];
   liveUrl?: string;
   images: string[];
   features?: string[];
