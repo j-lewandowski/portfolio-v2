@@ -1,5 +1,11 @@
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  CheckCircle2,
+  Timer,
+  AlertCircle,
+} from "lucide-react";
 import { Project } from "@/types";
 
 export const ProjectHeader = ({ project }: { project: Project }) => {
@@ -15,9 +21,40 @@ export const ProjectHeader = ({ project }: { project: Project }) => {
           <span>Last updated: {formatDate(project.lastUpdated)}</span>
         </div> */}
 
-        <div className="flex items-center gap-1.5">
-          <Clock className="h-4 w-4" />
-          <span>Status: {project.status}</span>
+        <div className="flex items-center gap-2">
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-4 w-4" />
+            Status:
+          </span>
+          <Badge
+            variant={
+              project.status === "COMPLETED"
+                ? "default"
+                : project.status === "IN_PROGRESS"
+                ? "secondary"
+                : "outline"
+            }
+            className={
+              project.status === "COMPLETED"
+                ? "bg-green-500/15 text-green-600 hover:bg-green-500/25 border-green-500/20 dark:text-green-400 pl-2 pr-2.5 py-0.5"
+                : project.status === "IN_PROGRESS"
+                ? "bg-amber-500/15 text-amber-600 hover:bg-amber-500/25 border-amber-500/20 dark:text-amber-400 pl-2 pr-2.5 py-0.5"
+                : "pl-2 pr-2.5 py-0.5"
+            }
+          >
+            {project.status === "COMPLETED" ? (
+              <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" />
+            ) : project.status === "IN_PROGRESS" ? (
+              <Timer className="w-3.5 h-3.5 mr-1.5" />
+            ) : (
+              <AlertCircle className="w-3.5 h-3.5 mr-1.5" />
+            )}
+            {project.status === "COMPLETED"
+              ? "Completed"
+              : project.status === "IN_PROGRESS"
+              ? "In Progress"
+              : project.status}
+          </Badge>
         </div>
       </div>
 

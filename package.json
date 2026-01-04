@@ -1,6 +1,6 @@
 {
   "name": "portfolio-v2",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "6.0.2",
     "@radix-ui/react-slot": "^1.2.0",
     "@radix-ui/react-tabs": "^1.1.9",
     "@sanity/client": "7.13.2",
@@ -29,6 +30,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@portabletext/types": "4.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

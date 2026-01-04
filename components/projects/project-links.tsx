@@ -4,33 +4,36 @@ import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/types";
 
 export const ProjectLinks = ({ project }: { project: Project }) => {
+  if (!project.links || project.links.length === 0) {
+    return null;
+  }
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Links</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        {project.githubUrl && (
-          <Button variant="outline" className="w-full justify-start" asChild>
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View Source Code
+        {project.links.map((link) => (
+          <Button
+            key={link._key}
+            variant="outline"
+            className="w-full justify-start"
+            asChild
+          >
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.type === "github" ? (
+                <Github className="mr-2 h-4 w-4" />
+              ) : (
+                <ExternalLink className="mr-2 h-4 w-4" />
+              )}
+              {link.label ||
+                (link.type === "github"
+                  ? "View Source Code"
+                  : "Visit Live Site")}
             </a>
           </Button>
-        )}
-
-        {project.liveUrl && (
-          <Button variant="outline" className="w-full justify-start" asChild>
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Visit Live Site
-            </a>
-          </Button>
-        )}
+        ))}
       </CardContent>
     </Card>
   );
