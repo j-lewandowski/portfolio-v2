@@ -30,6 +30,13 @@ export type ExperiencePageContent = {
   educationalExperience: TimelineItem[];
 };
 
+export type LinkItem = {
+  _key: string;
+  type: "github" | "live";
+  url: string;
+  label?: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -39,9 +46,8 @@ export type Project = {
   timeline: string;
   status: string;
   technologies: string[];
-  githubUrl?: string;
+  links?: LinkItem[];
   content?: PortableTextBlock[];
-  liveUrl?: string;
   images: string[];
   features?: string[];
   technicalDetails?: string;

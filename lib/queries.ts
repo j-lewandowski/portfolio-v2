@@ -55,8 +55,7 @@ export const getFeaturedProjects = async (): Promise<Project[]> => {
       timeline,
       status,
       "technologies": coalesce(technologies, []),
-      "githubUrl": github,
-      "liveUrl": deploymentUrl,
+      links,
       "images": coalesce(images[].asset->url, [])
     }
   `);
@@ -73,8 +72,7 @@ export const getProjects = async (): Promise<Project[]> => {
       timeline,
       status,
       "technologies": coalesce(technologies, []),
-      "githubUrl": github,
-      "liveUrl": deploymentUrl,
+      links,
       "images": coalesce(images[].asset->url, [])
     }
   `);
@@ -92,8 +90,7 @@ export const getProject = async (slug: string): Promise<Project> => {
       timeline,
       status,
       "technologies": coalesce(technologies, []),
-      "githubUrl": github,
-      "liveUrl": deploymentUrl,
+      links,
       "images": coalesce(images[].asset->url, []),
       content,
       features,

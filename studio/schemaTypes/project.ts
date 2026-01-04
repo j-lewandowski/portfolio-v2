@@ -98,15 +98,54 @@ export const projectType = defineType({
     }),
 
     defineField({
-      name: 'github',
-      title: 'GitHub repository',
-      type: 'url',
-    }),
-
-    defineField({
-      name: 'deploymentUrl',
-      title: 'Live URL',
-      type: 'url',
+      name: 'links',
+      title: 'Project Links',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'type',
+              title: 'Link Type',
+              type: 'string',
+              options: {
+                list: [
+                  {title: 'Source Code (GitHub)', value: 'github'},
+                  {title: 'Live Site', value: 'live'},
+                ],
+              },
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'url',
+              title: 'URL',
+              type: 'url',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'label',
+              title: 'Custom Label (Optional)',
+              type: 'string',
+              description: 'Overrides default label (e.g., "View Frontend Code")',
+            },
+          ],
+          preview: {
+            select: {
+              type: 'type',
+              url: 'url',
+              label: 'label',
+            },
+            prepare({type, url, label}) {
+              const defaultLabel = type === 'github' ? 'View Source Code' : 'Visit Live Site'
+              return {
+                title: label || defaultLabel,
+                subtitle: url,
+              }
+            },
+          },
+        },
+      ],
     }),
   ],
   preview: {
