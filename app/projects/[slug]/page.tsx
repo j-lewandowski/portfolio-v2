@@ -6,6 +6,8 @@ import { ProjectLinks } from "@/components/projects/project-links";
 import { getProject } from "@/lib/queries";
 import { notFound } from "next/navigation";
 
+export const revalidate = 86400;
+
 export default async function ProjectPage({
   params,
 }: {

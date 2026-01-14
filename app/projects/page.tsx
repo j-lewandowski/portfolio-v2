@@ -4,11 +4,16 @@ import { ProjectsHeader } from "@/components/projects/projects-header";
 import { getProjects } from "@/lib/queries";
 import { Metadata } from "next";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Projects | Jakub Lewandowski - Fullstack Developer",
   description:
-    "Explore Jakub Lewandowski's portfolio of web development projects, including React applications, Next.js websites, and full-stack solutions.",
+    "A showcase of technical projects including Go CLI tools, backend systems, and full-stack applications built with modern technologies.",
   keywords: [
+    "Backend development",
+    "Go CLI tools",
+    "NestJS",
     "React projects",
     "Next.js portfolio",
     "web development",
@@ -18,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects | Jakub Lewandowski - Fullstack Developer",
     description:
-      "Explore Jakub Lewandowski's portfolio of web development projects, including React applications, Next.js websites, and full-stack solutions.",
+      "A showcase of technical projects including Go CLI tools, backend systems, and full-stack applications built with modern technologies.",
     type: "website",
     images: [
       {
