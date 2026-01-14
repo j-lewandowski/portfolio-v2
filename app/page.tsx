@@ -6,6 +6,8 @@ import { Skills } from "@/components/sections/skills/skills";
 import { Timeline } from "@/components/sections/timeline/timeline";
 import { getFeaturedProjects, getSkills } from "@/lib/queries";
 
+export const revalidate = 86400;
+
 export default async function Home() {
   const skillsPageContent = await getSkills();
   const featuredProjects = await getFeaturedProjects();
